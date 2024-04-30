@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  krungsri:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${PORT}:${PORT}"
+    environment:
+      URL_LOGIN: "${URL_LOGIN}"
+      BASEURL: "${BASEURL}"
+      MY_PORTFOLIO_URL: "${MY_PORTFOLIO_URL}"
+      DEPOSIT_URL: "${DEPOSIT_URL}"
+      GET_STATEMENT_HISTORY_URL: "${GET_STATEMENT_HISTORY_URL}"
+      SMS_URL: "${SMS_URL}"
+      PORT: "${PORT}"
